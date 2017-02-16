@@ -21,16 +21,34 @@
             array(16, 'sixteen'),
             array(17, 'seventeen'),
             array(18, 'eighteen'),
-            array(19, 'nineteen')
+            array(19, 'nineteen'),
+            array(20, 'twenty'),
+            array(30, 'thirty'),
+            array(40, 'forty'),
+            array(50, 'fifty'),
+            array(60, 'sixty'),
+            array(70, 'seventy'),
+            array(80, 'eighty'),
+            array(90, 'ninety')
         );
 
         function numberIntoWords($input_integer)
         {
             $output = '';
             $number_words = array_reverse($this->number_data);
+
             foreach ($number_words as $number_and_word) {
-                if ($input_integer == $number_and_word[0]) {
-                    $output .= $number_and_word[1];
+                $number = $number_and_word[0];
+                $word = $number_and_word[1];
+
+                if ($input_integer >= $number) {
+                    if ($output) {
+                        $output .= ' ';
+                    }
+
+                    $output = $output . $word;
+
+                    $input_integer = $input_integer - $number;
                 }
             }
 
