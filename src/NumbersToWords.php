@@ -2,7 +2,7 @@
 
     class NumbersToWords
     {
-        function numberToWords()
+        function numberIntoWords()
         {
 
         }
