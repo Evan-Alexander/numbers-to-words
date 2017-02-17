@@ -61,6 +61,8 @@ This project demonstrates building an app using PHPUnit, Silex and Twig framewor
 | 912,415  |      nine hundred twelve thousand four hundred fifteen |
 | 673,413,000 | six hundred seventy three million four hundred thirteen thousand |
 | 1,000,000,000 | one trillion |
+| 1,000,000,000,000 | Number is too big! |
+
 
 * Phase 4 - Initial Silex framework with "Hello" on home page
 * Phase 5 - Twig template with a form that accepts a string and returns the result.

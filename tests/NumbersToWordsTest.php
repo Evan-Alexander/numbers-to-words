@@ -20,7 +20,8 @@
                 '7234' => 'seven thousand two hundred thirty four',
                 '912415 ' => 'nine hundred twelve thousand four hundred fifteen',
                 '673413000' => 'six hundred seventy three million four hundred thirteen thousand',
-                '1000000000' => 'one trillion'
+                '1000000000' => 'one trillion',
+                '1000000000000' => 'Number is too big!'
             );
 
             foreach ($tests as $input_as_string => $expected_output) {
