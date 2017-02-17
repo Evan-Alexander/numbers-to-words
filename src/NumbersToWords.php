@@ -30,7 +30,10 @@
             array(70, 'seventy'),
             array(80, 'eighty'),
             array(90, 'ninety'),
-            array(100, 'hundred')
+            array(100, 'hundred'),
+            array(1000, 'thousand'),
+            array(1000000, 'million'),
+            array(1000000000, 'trillion')
         );
 
         function numberIntoWords($input_integer)
@@ -48,11 +51,11 @@
                         // multiple = floor of input divided by number
                         $multiple = floor($input_integer / $number);
                         // if multiple > 9 then input is too large - Stop!
-                        if ($multiple > 9) {
+                        if ($multiple > 999) {
                             return 'Number is too big!';
                         }
                         // get word for multiple and prepend it to the word of the number
-                        $multiple_word = $this->number_data[$multiple - 1][1];
+                        $multiple_word = $this->numberIntoWords($multiple);
                         $word = $multiple_word . ' ' . $word;
                         // multiply the number by the multiple
                         $number = $number * $multiple;
